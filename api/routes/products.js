@@ -10,7 +10,7 @@ router.get('/', (req,res,next) => {
 
 //Handle post requests on /products
 router.post('/', (req,res,next) => {
-    res.status(200).json({
+    res.status(201).json({
         message:'Handling post requests on /products'
     })
 });
@@ -24,7 +24,7 @@ router.get('/:prodId/', (req,res,next) => {
 
 router.post('/:prodId/', (req,res,next) => {
     const id = req.params.prodId;
-    res.status(200).json({
+    res.status(201).json({
         message:'Created product id: ' + id
     })
 })
